@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" placeholder="Nhập loại trái cây bạn muốn" id="hoaqua">
+    <button onclick="kiemtra()">Xem giá</button>
+    <p><span id="giahoaqua"></span> VNĐ/kg</p>
+    <script>
+        function kiemtra() {
+            let loai = document.getElementById('hoaqua').value.toLowerCase();
+            let gia;
+            switch (loai) {
+                case "ổi":
+                case "dưa hấu":
+                    gia = 20000;
+                    break;
+
+                case "táo":
+                case "xoài":
+                    gia = 30000;
+                    break;
+
+                case "cam":
+                case "chôm chôm":
+                    gia = 40000;
+                    break;
+
+                case "măng cụt":
+                    gia = 50000;
+                    break;
+
+                default:
+                    alert('Không có bán loại này');
+            }
+            document.getElementById('giahoaqua').innerText = gia;
+        }
+    </script>
+</body>
+
+</html>
